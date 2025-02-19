@@ -41,8 +41,9 @@ salaryPower = currentSalary ** 2
 
 randomSaving = 0
 
-print(f"\nHow may I help you for {months[currentMonth]}?")
-print("1: Spendings on savings, rent and electricity")
+print(f"\nMangaging finances for {months[currentMonth]}.")
+print(f"Salary for current month: {currentSalary}, allocated {allocation[0]}/{allocation[1]}/{allocation[2]} for savings, rent and electricity.")
+print("\n1: Spendings on savings, rent and electricity")
 print("2: Your combined total spendings")
 print("3: What will remain after your spendings")
 print(f"4: Yearly estimate for rent and electricity based on {months[currentMonth]}")
@@ -72,6 +73,6 @@ while option != 7 :
 
     option = int(input("\nPlease enter another option: "))
 
-print("\nSee you next month!")
+print("\nSee you next month!\n")
 
         
