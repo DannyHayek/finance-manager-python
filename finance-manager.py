@@ -32,5 +32,10 @@ remainderSalary = 0
 yearlyEstimate = 0
 salaryPower = 0
 randomSaving = 0
+option = int(input("Please enter an option: "))
 
-
+while option != 7 :
+    if option == 1 :
+        for i in range(3) :
+            moneyAllocation[i] = allocation[i] * currentSalary / 100
+        print(f"You have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
