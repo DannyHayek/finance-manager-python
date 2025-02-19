@@ -27,8 +27,13 @@ while stop:
     
 
 moneyAllocation = [0, 0, 0]
-monthTotal = 0
-remainderSalary = 0
+for i in range(3) :
+    moneyAllocation[i] = allocation[i] * currentSalary / 100
+
+monthTotal =  moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
+
+remainderSalary = currentSalary - monthTotal
+
 yearlyEstimate = 0
 salaryPower = 0
 randomSaving = 0
@@ -36,29 +41,14 @@ option = int(input("Please enter an option: "))
 
 while option != 7 :
     if option == 1 :
-        for i in range(3) :
-            moneyAllocation[i] = allocation[i] * currentSalary / 100
-            monthTotal += moneyAllocation[i]
-
         print(f"In {months[currentMonth]}, you have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
 
     if option == 2 :
-        if monthTotal == 0:         #Handling redundancy if the first option was selected before the second option
-            for i in range(3) :
-                moneyAllocation[i] = allocation[i] * currentSalary / 100
-                monthTotal += moneyAllocation[i]
-
         print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}.")
 
     if option == 3 :
-        if monthTotal == 0:
-            for i in range(3) :
-                moneyAllocation[i] = allocation[i] * currentSalary / 100
-                monthTotal += moneyAllocation[i]
-                remainderSalary = currentSalary - monthTotal
-
         print(f"You have {remainderSalary} left in {months[currentMonth]}.")
-        
+
     option = int(input("Please enter another option: "))
 
         
