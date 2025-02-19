@@ -1,15 +1,16 @@
 currentSalary = 0
 currentMonth = 0
 allocation = [33, 33, 33]
+allocOptions = ["savings", "rent", "electricity"]
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 stop = True             #boolean for error handling user input
 
-print("Hello Nabiha!")
+print("Hello Nabiha! Welcome to your finance manager.")
 
 while stop:
-    currentSalary = int(input("Please input your salary for the month: "))
+    currentSalary = int(input("\nPlease input your salary for the month: "))
 
-    tempMonth = int(input("Please input the current month (1-12): "))
+    tempMonth = int(input("\nPlease input the current month (1-12): "))
     if 0 < tempMonth < 13:
         currentMonth = tempMonth - 1    #For indexing
     else :
@@ -17,7 +18,7 @@ while stop:
         continue
     
     for i in range(3):
-        allocation[i] = int(input("Please input your salary allocations (Savings/Rent/Electricity): "))
+        allocation[i] = int(input(f"\nPlease input your percentage salary allocation for {allocOptions[i]}: %"))
 
     sum = allocation[0] +  allocation[1] + allocation[2]
     if sum < 102 :             #Small error interval for human error
@@ -39,24 +40,38 @@ yearlyEstimate = (moneyAllocation[1] + moneyAllocation[2]) * 12
 salaryPower = currentSalary ** 2
 
 randomSaving = 0
-option = int(input("Please enter an option: "))
+
+print(f"\nHow may I help you for {months[currentMonth]}?")
+print("1: Spendings on savings, rent and electricity")
+print("2: Your combined total spendings")
+print("3: What will remain after your spendings")
+print(f"4: Yearly estimate for rent and electricity based on {months[currentMonth]}")
+print("5: Your salary to the power of 2 (YOU WISH)")
+print("6: ")
+print("7: Quit the interface.")
+
+
+option = int(input("\nPlease enter an option: "))
 
 while option != 7 :
     if option == 1 :
-        print(f"In {months[currentMonth]}, you have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
+        print(f"\nIn {months[currentMonth]}, you have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
 
     if option == 2 :
-        print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}.")
+        print(f"\nYour combined total spendings for {months[currentMonth]} amount to {monthTotal}.")
 
     if option == 3 :
-        print(f"You have {remainderSalary} left in {months[currentMonth]}.")
+        print(f"\nYou have {remainderSalary} left in {months[currentMonth]}.")
 
     if option == 4 :
-        print(f"Your yearly estimate for rent and electricity amounts to {yearlyEstimate}.")
+        print(f"\nYour yearly estimate for rent and electricity amounts to {yearlyEstimate}.")
 
     if option == 5 :
-        print(f"Your salary to the power of 2 would be {salaryPower}.")
+        print(f"\nYour salary to the power of 2 would be {salaryPower}.")
 
-    option = int(input("Please enter another option: "))
+
+    option = int(input("\nPlease enter another option: "))
+
+print("\nSee you next month!")
 
         
