@@ -59,34 +59,35 @@ print("5: Your salary to the power of 2 (YOU WISH)")
 print("6: If you'd like to add a specific amount to savings")
 print("7: Quit the interface.")
 
-
 option = int(input("\nPlease enter an option: "))
 
 while option != 7 :
     if option == 1 :
         print(f"\nIn {months[currentMonth]}, you have allocated ${moneyAllocation[0]} to savings, ${moneyAllocation[1]} to rent and ${moneyAllocation[2]} to electricity!" )
 
-    if option == 2 :
+    elif option == 2 :
         print(f"\nYour combined total spendings for {months[currentMonth]} amount to ${monthTotal}.")
 
-    if option == 3 :
+    elif option == 3 :
         print(f"\nYou have ${remainderSalary} left in {months[currentMonth]}.")
 
-    if option == 4 :
+    elif option == 4 :
         print(f"\nYour yearly estimate for rent is ${yearlyRent}.")
         print(f"Your yearly estimate for electricity is ${yearlyElec}.")
         print(f"Your combined yearly estimate for rent and electricity is ${yearlyEstimate}.")
 
 
-    if option == 5 :
+    elif option == 5 :
         print(f"\nYour salary to the power of 2 would be ${salaryPower}.")
 
-    if option == 6 :
+    elif option == 6 :
         extraSaving = int(input("\nPlease enter the extra savings: $"))
         if moneyAllocation[0] != 0 :
             extraDivided = extraSaving / moneyAllocation[0]
         print(f"The result of this operation is: ${extraDivided}")
 
+    else :
+        print("\nPlease enter a valid option!")
 
     option = int(input("\nPlease enter another option: "))
 
