@@ -20,9 +20,11 @@ while stop:
         allocation[i] = int(input("Please input your salary allocations (Savings/Rent/Electricity): "))
 
     sum = allocation[0] +  allocation[1] + allocation[2]
-    if 98 < sum < 102 :             #Small error interval for human error
+    if sum < 102 :             #Small error interval for human error
         stop = False
     else :
-        print("You still have unnallocated funds! Restarting!")
+        print("You have overallocated funds! Restarting!")
     
-print(allocation)
+
+# moneyAllocation = [0, 0, 0]
+# monthTotal = moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
