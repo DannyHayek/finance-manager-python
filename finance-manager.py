@@ -11,7 +11,7 @@ while stop:
 
     tempMonth = int(input("Please input the current month (1-12): "))
     if 0 < tempMonth < 13:
-        currentMonth = tempMonth
+        currentMonth = tempMonth - 1    #For indexing
     else :
         print("That is not a valid month! Restarting!")
         continue
@@ -38,4 +38,16 @@ while option != 7 :
     if option == 1 :
         for i in range(3) :
             moneyAllocation[i] = allocation[i] * currentSalary / 100
-        print(f"You have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
+            
+        print(f"In {months[currentMonth]}, you have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
+
+    # if option == 2 :
+    #     for i in range(3) :
+    #         moneyAllocation[i] = allocation[i] * currentSalary / 100
+    #         monthTotal += moneyAllocation[i]
+
+    #     print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}")
+
+    # option = int(input("Please enter another option: "))
+
+        
