@@ -41,13 +41,13 @@ while option != 7 :
             
         print(f"In {months[currentMonth]}, you have allocated {moneyAllocation[0]} to savings, {moneyAllocation[1]} to rent and {moneyAllocation[2]} to electricity!" )
 
-    # if option == 2 :
-    #     for i in range(3) :
-    #         moneyAllocation[i] = allocation[i] * currentSalary / 100
-    #         monthTotal += moneyAllocation[i]
+    if option == 2 :
+        for i in range(3) :
+            moneyAllocation[i] = allocation[i] * currentSalary / 100
+            monthTotal += moneyAllocation[i]
 
-    #     print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}")
+        print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}")
 
-    # option = int(input("Please enter another option: "))
+    option = int(input("Please enter another option: "))
 
         
