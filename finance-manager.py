@@ -36,7 +36,8 @@ remainderSalary = currentSalary - monthTotal
 
 yearlyEstimate = (moneyAllocation[1] + moneyAllocation[2]) * 12
 
-salaryPower = 0
+salaryPower = currentSalary ** 2
+
 randomSaving = 0
 option = int(input("Please enter an option: "))
 
@@ -52,6 +53,9 @@ while option != 7 :
 
     if option == 4 :
         print(f"Your yearly estimate for rent and electricity amounts to {yearlyEstimate}.")
+
+    if option == 5 :
+        print(f"Your salary to the power of 2 would be {salaryPower}.")
 
     option = int(input("Please enter another option: "))
 
