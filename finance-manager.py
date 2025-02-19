@@ -8,7 +8,11 @@ stop = True             #boolean for error handling user input
 print("Hello Nabiha! Welcome to your finance manager.")
 
 while stop:
+
     currentSalary = int(input("\nPlease input your salary for the month: "))
+    if currentSalary < 0 :
+        print("Your salary cannot be negative! (Unless things are REALLY bad but at that point you need a lot more than a simple finance manager.)")
+        continue
 
     tempMonth = int(input("\nPlease input the current month (1-12): "))
     if 0 < tempMonth < 13:
