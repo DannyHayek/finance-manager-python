@@ -9,4 +9,4 @@ It can then show you:
 -How much of your salary will remain after spendings.\
 -Yearly estimates for rent and electricity.\
 -Your salary if it were to the power of two.\
--Pending\
+-Add an extra savings amount and divide it by the allocated amount.
