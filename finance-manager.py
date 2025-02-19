@@ -39,7 +39,10 @@ monthTotal =  moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
 
 remainderSalary = currentSalary - monthTotal
 
-yearlyEstimate = (moneyAllocation[1] + moneyAllocation[2]) * 12
+yearlyRent = moneyAllocation[1] * 12
+yearlyElec = moneyAllocation[2] * 12
+
+yearlyEstimate = yearlyRent + yearlyElec
 
 salaryPower = currentSalary ** 2
 
@@ -50,7 +53,7 @@ print(f"Salary for current month: {currentSalary}, allocated {allocation[0]}/{al
 print("\n1: Spendings on savings, rent and electricity")
 print("2: Your combined total spendings")
 print("3: What will remain after your spendings")
-print(f"4: Yearly estimate for rent and electricity based on {months[currentMonth]}")
+print(f"4: Yearly estimates for rent and electricity based on {months[currentMonth]}")
 print("5: Your salary to the power of 2 (YOU WISH)")
 print("6: ")
 print("7: Quit the interface.")
@@ -69,7 +72,10 @@ while option != 7 :
         print(f"\nYou have {remainderSalary} left in {months[currentMonth]}.")
 
     if option == 4 :
-        print(f"\nYour yearly estimate for rent and electricity amounts to {yearlyEstimate}.")
+        print(f"\nYour yearly estimate for rent is {yearlyRent}.")
+        print(f"Your yearly estimate for electricity is {yearlyElec}.")
+        print(f"Your combined yearly estimate for rent and electricity is {yearlyEstimate}.")
+
 
     if option == 5 :
         print(f"\nYour salary to the power of 2 would be {salaryPower}.")
