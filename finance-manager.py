@@ -50,6 +50,15 @@ while option != 7 :
 
         print(f"Your combined total spendings for {months[currentMonth]} amount to {monthTotal}.")
 
+    if option == 3 :
+        if monthTotal == 0:
+            for i in range(3) :
+                moneyAllocation[i] = allocation[i] * currentSalary / 100
+                monthTotal += moneyAllocation[i]
+                remainderSalary = currentSalary - monthTotal
+
+        print(f"You have {remainderSalary} left in {months[currentMonth]}.")
+        
     option = int(input("Please enter another option: "))
 
         
