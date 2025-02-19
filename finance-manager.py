@@ -67,7 +67,7 @@ while option != 7 :
         print(f"\nIn {months[currentMonth]}, you have allocated ${moneyAllocation[0]} to savings, ${moneyAllocation[1]} to rent and ${moneyAllocation[2]} to electricity!" )
 
     if option == 2 :
-        print(f"\nYour combined total spendings for ${months[currentMonth]} amount to {monthTotal}.")
+        print(f"\nYour combined total spendings for {months[currentMonth]} amount to ${monthTotal}.")
 
     if option == 3 :
         print(f"\nYou have ${remainderSalary} left in {months[currentMonth]}.")
@@ -81,7 +81,11 @@ while option != 7 :
     if option == 5 :
         print(f"\nYour salary to the power of 2 would be ${salaryPower}.")
 
-
+    if option == 6 :
+        extraSaving = int(input("\nPlease enter the extra savings: $"))
+        if moneyAllocation[0] != 0 :
+            extraDivided = extraSaving / moneyAllocation[0]
+        print(f"The result of this operation is: ${extraDivided}")
 
 
     option = int(input("\nPlease enter another option: "))
