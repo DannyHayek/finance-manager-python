@@ -26,5 +26,11 @@ while stop:
         print("You have overallocated funds! Restarting!")
     
 
-# moneyAllocation = [0, 0, 0]
-# monthTotal = moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
+moneyAllocation = [0, 0, 0]
+monthTotal = 0
+remainderSalary = 0
+yearlyEstimate = 0
+salaryPower = 0
+randomSaving = 0
+
+
