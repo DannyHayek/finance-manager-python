@@ -12,8 +12,11 @@ monthStorage = {
 }
 
 print("Hello Nabiha! Welcome to your finance manager.")
+stopMonths = input("\nWould you like to start adding data to the manager? (Y/n) ")
 
-while stopMonths :
+while stopMonths != "n":
+
+    stopSingle = True
 
     while stopSingle:
         tempMonth = int(input("\nPlease input the current month (1-12): "))
@@ -37,12 +40,14 @@ while stopMonths :
 
         sum = allocation[0] +  allocation[1] + allocation[2]
         if sum < 102 :             #Small error interval for human error
-            stop = False
+            stopSingle = False
             monthStorage["allocations"] = allocation
             monthsList.append(monthStorage)
 
         else :
             print("You have overallocated funds! Restarting!")
+    
+    stopMonths = input("\nWould you like to add any more data? (Y/n) ")
     
 print(monthsList)
 
