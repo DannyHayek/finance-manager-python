@@ -126,10 +126,11 @@ while operations != "n" :
 
                     moneyAllocation[0] += extraSaving
 
-                    print(moneyAllocation[0])
-                    if moneyAllocation[0] != 0 :
-                        extraDivided = extraSaving / moneyAllocation[0]
-                    print(f"The result of this operation is: ${extraDivided}")
+                    print(f"You have added ${extraSaving} to your savings, which now total ${moneyAllocation[0]}.")
+
+                    # if moneyAllocation[0] != 0 :
+                    #     extraDivided = extraSaving / moneyAllocation[0]
+                    # print(f"The result of this operation is: ${extraDivided}")
 
                 else :
                     print("\nPlease enter a valid option!")
