@@ -100,10 +100,13 @@ while operations != "n" :
             option = int(input("\nPlease enter an option: "))
 
             while option != 7 :
+                monthTotal =  moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
+                remainderSalary = currentSalary - monthTotal
                 if option == 1 :
                     print(f"\nIn {months[workingMonth]}, you have allocated ${moneyAllocation[0]} to savings, ${moneyAllocation[1]} to rent and ${moneyAllocation[2]} to electricity!" )
 
                 elif option == 2 :
+                    monthTotal =  moneyAllocation[0] + moneyAllocation[1] + moneyAllocation[2]
                     print(f"\nYour combined total spendings for {months[workingMonth]} amount to ${monthTotal}.")
 
                 elif option == 3 :
@@ -120,6 +123,10 @@ while operations != "n" :
 
                 elif option == 6 :
                     extraSaving = int(input("\nPlease enter the extra savings: $"))
+
+                    moneyAllocation[0] += extraSaving
+
+                    print(moneyAllocation[0])
                     if moneyAllocation[0] != 0 :
                         extraDivided = extraSaving / moneyAllocation[0]
                     print(f"The result of this operation is: ${extraDivided}")
