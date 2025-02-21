@@ -10,4 +10,4 @@ It can then show you any of the following calculations for the month of your cho
 -How much of your salary will remain after spendings.\
 -Yearly estimates for rent and electricity.\
 -Your salary if it were to the power of two.\
--Add an extra savings amount and divide it by the allocated amount.
+-Add an extra savings amount.
